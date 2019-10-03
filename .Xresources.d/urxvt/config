@@ -1,0 +1,58 @@
+!
+! urxvt
+! v9.22-r6 - https://github.com/yuri1969/rxvt-unicode/
+! https://github.com/exg/rxvt-unicode
+!
+
+! Set color theme
+#include "theme"
+
+! Set possible font styles. Use Powerline fonts from https://github.com/powerline/fonts
+URxvt.font: xft:DejaVu Sans Mono for Powerline:size=11
+URxvt.boldFont: xft:DejaVu Sans Mono for Powerline:size=11:style=Bold
+URxvt.italicFont: xft:DejaVu Sans Mono for Powerline:size=11:style=Italic
+URxvt.boldItalicFont: xft:DejaVu Sans Mono for Powerline:size=11:style=Bold Italic
+
+! Disable scrollbars
+URxvt.scrollBar: false
+URxvt.scrollBar_right: false
+URxvt.scrollBar_floating: false
+URxvt.scrollstyle: rxvt
+
+! Disable hacky transparency
+URxvt.transparent: false
+! Use 32b color depth
+URxvt.depth: 32
+
+! Do not scroll with output
+URxvt.scrollTtyOutput: false
+! Scroll in relation to buffer (with mouse scroll or Shift+Page Up)
+URxvt.scrollWithBuffer: true
+! Scroll back to the bottom on keypress
+URxvt.scrollTtyKeypress: true
+
+! Enable cursor blinking
+URxvt.cursorBlink: true
+! Hide mouse cursor after a delay or when typing
+URxvt.pointerBlank: true
+! Wait 4sec to hide the mouse cursor
+URxvt.pointerBlankDelay: 4
+! Set line buffer to max value
+URxvt.saveLines: 65535
+! Set the urgency hint for the WM on receipt of a bell character
+URxvt.urgentOnBell: true
+! Disable the irritating visual bell
+URxvt.visualBell: false
+! Fix weird too big letter spacing. No needed for x11-terms/rxvt-unicode-9.22-r6
+!URxvt.letterSpace: -1
+! i3wm hack - dont request a borderless window from the WM
+URxvt.borderLess: false
+! Speed up loading
+URxvt.skipBuiltinGlyphs: true
+
+! Perl extensions - URL matcher
+URxvt.perl-ext: matcher
+! Open detected URLs in Firefox
+URxvt.url-launcher: firefox
+! Use classic LMB to open the URLs
+URxvt.matcher.button: 1

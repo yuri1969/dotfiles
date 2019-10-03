@@ -1,0 +1,289 @@
+# i3 config file (v4)
+#
+# Please see http://i3wm.org/docs/userguide.html for a complete reference!
+
+# Set the main control key. Mod1 = <alt>; Mod4 = <super> (WinKey)
+set $mod Mod4
+
+# Set font for window titles and the bar {} block. DejaVu Sans comes with glyphs and fun
+font pango:DejaVu Sans Mono 10
+
+# Disable disturbing window borders
+hide_edge_borders smart
+
+# Disable window bar in a hacky way...
+for_window [class="^.*"] border pixel 0
+
+# Detect monitor for wrokspace orientation
+default_orientation auto
+
+# Use Mouse+$mod to drag floating windows to their wanted position
+floating_modifier $mod
+
+############################### Bindings ###############################
+
+# Start a terminal - set to 'urxvtc' via TERMINAL="urxvtc" in ~/.bashrc
+bindsym $mod+Return exec i3-sensible-terminal
+
+# Kill focused window
+bindsym $mod+Shift+q kill
+
+# Use rofi as dmenu replacement - provided by x11-misc/rofi
+bindsym $mod+d exec --no-startup-id "rofi -show drun -config ~/.config/i3/rofi.conf"
+
+# Change window focus
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+
+# Move focused window
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+
+# Split in horizontal orientation
+# 'vertical' actually splits it horizontally?!
+bindsym $mod+h split vertical
+
+# Split in vertical orientation
+bindsym $mod+v split horizontal
+
+# Toggle split orientation
+bindsym $mod+t split toggle
+
+# Enter fullscreen mode for the focused container
+bindsym $mod+f fullscreen toggle
+
+# Change container layout (stacked, tabbed, toggle split)
+bindsym $mod+s layout stacking
+bindsym $mod+w layout tabbed
+bindsym $mod+e layout toggle split
+
+# Toggle tiling / floating
+bindsym $mod+Shift+space floating toggle
+
+# Change focus between tiling / floating windows
+bindsym $mod+space focus mode_toggle
+
+# Focus the parent container
+bindsym $mod+a focus parent
+
+# Focus the child container
+#
+# Disabled for now
+# bindsym $mod+d focus child
+
+######################## Workspaces & displays #########################
+
+# Displays - name strings by 'xrandr' - provided by x11-apps/xrandr
+set $ntb-display LVDS-1
+set $vga-output VGA-1
+set $hdmi-output HDMI-1
+
+# Name the workspaces
+set $ws1 "1:"
+set $ws2 "2:"
+set $ws3 "3:"
+set $ws4 "4:"
+set $ws5 "5"
+set $ws6 "6"
+set $ws7 "7"
+set $ws8 "8"
+set $ws9 "9"
+set $ws10 "10:"
+
+# Switch to workspace #
+bindsym $mod+1 workspace $ws1
+bindsym $mod+2 workspace $ws2
+bindsym $mod+3 workspace $ws3
+bindsym $mod+4 workspace $ws4
+bindsym $mod+5 workspace $ws5
+bindsym $mod+6 workspace $ws6
+bindsym $mod+7 workspace $ws7
+bindsym $mod+8 workspace $ws8
+bindsym $mod+9 workspace $ws9
+bindsym $mod+0 workspace $ws10
+
+# Move focused container to workspace #
+bindsym $mod+Shift+1 move container to workspace $ws1
+bindsym $mod+Shift+2 move container to workspace $ws2
+bindsym $mod+Shift+3 move container to workspace $ws3
+bindsym $mod+Shift+4 move container to workspace $ws4
+bindsym $mod+Shift+5 move container to workspace $ws5
+bindsym $mod+Shift+6 move container to workspace $ws6
+bindsym $mod+Shift+7 move container to workspace $ws7
+bindsym $mod+Shift+8 move container to workspace $ws8
+bindsym $mod+Shift+9 move container to workspace $ws9
+bindsym $mod+Shift+0 move container to workspace $ws10
+
+# Move current workspace to another display
+bindsym $mod+z move workspace to output left
+bindsym $mod+x move workspace to output right
+
+# Run an initial RandR setup for a new VGA connected display
+bindsym $mod+shift+z exec --no-startup-id "xrandr --output $vga-output --left-of LVDS-1 --auto"
+bindsym $mod+shift+x exec --no-startup-id "xrandr --output $vga-output --left-of LVDS-1 --auto"
+
+# Reload the configuration file
+bindsym $mod+Shift+c reload
+
+# Restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
+bindsym $mod+Shift+r restart
+
+# Exit i3 (logs you out of your X session)
+bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+
+############################# Resize mode ##############################
+
+# Resize window (you can also use the mouse for that)
+mode "resize" {
+        # These bindings trigger as soon as you enter the resize mode
+
+        # Pressing left will shrink the window’s width.
+        # Pressing right will grow the window’s width.
+        # Pressing up will shrink the window’s height.
+        # Pressing down will grow the window’s height.
+        bindsym Left resize shrink width 10 px or 10 ppt
+        bindsym Down resize grow height 10 px or 10 ppt
+        bindsym Up resize shrink height 10 px or 10 ppt
+        bindsym Right resize grow width 10 px or 10 ppt
+
+        # back to normal: Enter or Escape
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+
+bindsym $mod+r mode "resize"
+
+############################ Workspace bar #############################
+
+bar {
+    workspace_buttons yes
+    # Remove workspace numbers when using named ones
+    strip_workspace_numbers yes
+    # Display the bar on top
+    position top
+    # Tray icons only on the primary display
+    tray_output primary
+    # Use FontAwesome for bar icons - provided by media-fonts/fontawesome
+    font pango:FontAwesome 10
+    separator_symbol "〉"
+
+    # Use i3blocks - provided by x11-misc/i3blocks
+    #
+    # blocklets require - x11-misc/xkblayout-state
+    status_command i3blocks -c ~/.config/i3blocks/config
+
+    colors {
+        background #000000
+        # be kind to eyes - #FFFFFF is too much
+        statusline #EEEEEE
+        separator  #666666
+
+        # Schema: border background text
+        focused_workspace  #C0C0C0 #C0C0C0 #222222
+        active_workspace   #333333 #C0C0C0 #222222
+        inactive_workspace #000000 #000000 #EEEEEE
+        urgent_workspace   #ED322F #ED322F #222222
+        binding_mode       #ED322F #ED322F #222222
+    }
+}
+
+########################### System bindings ############################
+
+# Set locking mechanism
+bindsym $mod+l exec --no-startup-id xautolock -locknow
+
+# Signal '11' to i3blocks
+bindsym --release Caps_Lock exec --no-startup-id pkill -SIGRTMIN+11 i3blocks
+
+# Audio key bindings + signal '10' to i3blocks
+# https://www.hillenius.com/post/the_i3_window_manager_and_the_thinkpad_t400s_multimedia_keys/
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 '+5%' \
+    && pkill -SIGRTMIN+10 i3blocks
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 '-5%' \
+    && pkill -SIGRTMIN+10 i3blocks
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle
+bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute 1 toggle
+
+# Brightness key bindings - xbacklight is provided by sys-power/acpilight
+bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 10
+bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 10
+
+# Screenshot key bindings - maim is provided by media-gfx/maim
+set $screenshot ~/Pictures/$(date +%Y%m%d-%H%M%S_snap).png
+bindsym Print exec --no-startup-id maim $screenshot && maim | xclip -selection clipboard -t image/png
+bindsym Mod1+Print exec --no-startup-id maim -i $(xdotool getactivewindow) $screenshot \
+    && maim -i $(xdotool getactivewindow) | xclip -selection clipboard -t image/png
+bindsym Shift+Print exec --no-startup-id maim -s | xclip -selection clipboard -t image/png
+
+##########################  Assign workspace  ##########################
+
+# Get the 'class' value using 'xprop' util
+
+# Move Firefox/Nightly to the 1st one
+assign [class="^Nightly$"] $ws1
+assign [class="^Nightly$"] output primary
+
+# Move Discord to the 10th one
+assign [class="^discord$"] $ws10
+
+# Move terminal to the 2nd one
+#assign [class="^term*$"] $ws2
+#assign [class="^term*$"] output primary
+############################## Auto start ##############################
+
+# Make sure the notebook display is set as primary
+exec_always --no-startup-id xrandr --output $ntb-display --primary
+
+# Disable bell
+#exec --no-startup-id xset -b
+
+# Cap CD-ROM drive's speed at 4x
+exec --no-startup-id eject -x 4
+
+# Set the default volume to 50%
+exec --no-startup-id pactl set-sink-volume 0 '50%'
+
+# dunst - notification daemon - provided by x11-misc/dunst
+exec --no-startup-id dunst -config ~/.config/i3/dunstrc.ini
+
+# Load X resources configuration
+exec_always --no-startup-id xrdb -load ~/.Xresources
+
+# urxvtd - terminal emulator daemon - provided by x11-terms/rxvt-unicode
+exec --no-startup-id urxvtd --quiet --opendisplay --fork
+
+# Firefox/Nightly via gtk-launch - provided by x11-libs/gtk+ 
+#exec cd ~/.local/share/applications && gtk-launch Nightly.desktop
+
+# Discord - provided by net-im/discord-bin
+exec --no-startup-id discord
+
+# udiskie - removable media auto-mount (tray icon enabled) - provided by sys-fs/udiskie
+exec --no-startup-id udiskie -s
+
+# xautolock - lock the screen after 3min - provided by x11-misc/xautolock
+# -detectsleep
+set $notifier "notify-send -u critical -t 10000 -- 'LOCKING screen in 20 seconds'"
+exec --no-startup-id xautolock -time 3 -locker "i3lock -c 111111" \
+    -notify 20 -notifier $notifier
+
+# feh - set wallpaper - provided by media-gfx/feh
+set $wallpaper ~/.config/i3/feh/wallpaper.jpg
+exec --no-startup-id feh --bg-scale $wallpaper
+
+# redshit - eye saver - provided by x11-misc/redshift
+exec --no-startup-id redshift-gtk
+
+# nm-applet - network manager - provided by gnome-extra/nm-applet
+#exec --no-startup-id nm-applet
+
+# compton - standalone compositor (Conky transparency) - provided by x11-misc/compton
+exec_always --no-startup-id compton --config ~/.config/i3/compton.conf
+
+# conky - desktop status - provided by pp-admin/conky
+exec --no-startup-id conky -c ~/.config/i3/conkyrc.lua
+

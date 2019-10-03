@@ -1,0 +1,50 @@
+#
+# starship
+# 0.19.0
+# https://github.com/starship/starship
+#
+
+# Don't print a new line at the start of the prompt
+add_newline = false
+
+[directory]
+truncate_to_repo = true
+
+[character]
+symbol = "❯"
+
+[cmd_duration]
+min_time = 3
+
+[battery]
+#disabled = true
+
+[golang]
+disabled = true
+
+[hostname]
+# Hide hostname unless accessing via SSH
+ssh_only = true
+
+[jobs]
+disabled = true
+
+[nix_shell]
+disabled = true
+
+# Shows used NodeJS version
+[nodejs]
+symbol = "■ "
+
+[package]
+disabled = true
+
+[python]
+disabled = true
+
+[ruby]
+disabled = true
+
+[rust]
+disabled = true
+

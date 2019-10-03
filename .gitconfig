@@ -1,0 +1,14 @@
+[user]
+    name = yuri1969
+    email = 1969yuri1969@gmail.com
+[core]
+    editor = vim
+    longpaths = true
+    autocrlf = false
+[diff]
+    tool = vimdiff
+[difftool]
+    prompt = false
+[alias]
+    # https://github.com/perlpunk/slides.tpcig2018/blob/dev/git-tips-tricks/git-tips-tricks.md
+    ll = log --pretty=format:"%C(yellow)%h\\ %C(cyan)%ad%Cred%d\\ %Creset%s%Cgreen\\ [%an]" --decorate --date=short --graph

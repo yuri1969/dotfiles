@@ -1,0 +1,6 @@
+#!/bin/bash
+
+LAYOUT=$(xkblayout-state print %s)
+
+echo "$LAYOUT" # full text
+echo "$LAYOUT" # short text

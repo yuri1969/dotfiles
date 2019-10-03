@@ -1,0 +1,6 @@
+Xcursor.theme: whiteglass
+
+! Import urxvt config
+#include ".Xresources.d/urxvt/config"
+! Import generic xft config
+#include ".Xresources.d/xft"

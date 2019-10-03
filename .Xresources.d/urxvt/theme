@@ -1,0 +1,42 @@
+!
+! urxvt color theme
+!
+! Based on 'solarized.dark' - https://terminal.sexy/
+!
+
+! special
+URxvt.foreground:   #eeeeee
+URxvt.background:   #002b36
+URxvt.cursorColor:  #eeeeee
+
+! black
+URxvt.color0:       #002b36
+URxvt.color8:       #6d858e
+
+! red
+URxvt.color1:       #dc322f
+URxvt.color9:       #dc322f
+
+! green
+URxvt.color2:       #71c600
+URxvt.color10:      #71c600
+
+! yellow
+URxvt.color3:       #b58900
+URxvt.color11:      #b58900
+
+! blue
+URxvt.color4:       #268bd2
+URxvt.color12:      #268bd2
+
+! magenta
+URxvt.color5:       #6c71c4
+URxvt.color13:      #6c71c4
+
+! cyan
+URxvt.color6:       #2aa198
+URxvt.color14:      #2aa198
+
+! white
+URxvt.color7:       #93a1a1
+URxvt.color15:      #fdf6e3

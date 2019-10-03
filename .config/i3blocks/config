@@ -1,0 +1,146 @@
+# i3blocks config file
+#
+# Please see man i3blocks for a complete reference!
+# The man page is also hosted at http://vivien.github.io/i3blocks
+#
+# List of valid properties:
+#
+# align
+# color
+# command
+# full_text
+# instance
+# interval
+# label
+# min_width
+# name~/.config/i3blocks/blocklets/
+# separator
+# separator_block_width
+# short_text
+# signal
+# urgent
+
+# Note:
+#
+# The blocklets use Font Awesome glyphs - provided by media-fonts/fontawesome
+#
+
+# Global properties
+#
+#command=/usr/libexec/i3blocks/$BLOCK_NAME
+command=~/.config/i3blocks/blocklets/$BLOCK_NAME
+separator_block_width=25
+markup=none
+
+#################################################################################
+
+# Date Time
+#
+[time]
+command=date '+%Y-%m-%d %H:%M'
+interval=5
+align=center
+separator_block_width=150
+separator=false
+
+# Volume indicator
+#
+[volume_pactl]
+label=
+interval=once
+min_width=100%
+signal=10
+
+# Memory usage
+#
+# The type defaults to "mem" if the instance is not specified.
+[memory]
+command=/usr/libexec/i3blocks/$BLOCK_NAME
+label=
+interval=20
+
+#[memory]
+#label=SWAP
+#instance=swap
+#separator=false
+#interval=20
+
+# Disk usage
+#
+[disk]
+label=
+interval=120
+
+# Network interface monitoring
+#
+#[iface]
+#instance=wlp3s0
+#color=#00FF00
+#interval=10
+#separator=false
+
+[wifi_pure]
+label=
+instance=wlp3s0
+interval=10
+
+#[bandwidth]
+#instance=eth0
+#interval=5
+
+# CPU usage
+#
+[cpu_usage_int]
+label=
+interval=1
+min_width= 100%
+
+#[load_average]
+#interval=10
+
+# Temperature
+#
+[temperature_int]
+label=
+interval=30
+
+# Battery indicator
+#
+[battery_icons]
+#instance=1
+interval=30
+
+# Generic media player support
+#
+# This displays "ARTIST - SONG" if a music is playing.
+# Supported players are: spotify, vlc, audacious, xmms2, mplayer, and others.
+#[mediaplayer]
+#instance=spotify
+#interval=5
+#signal=10
+
+# OpenVPN support
+#
+# Support multiple VPN, with colors.
+#[openvpn]
+#interval=20
+
+# Print kernel version
+#
+[host]
+command=uname -r
+interval=once
+
+# Show current keyboard layout
+#
+[kb_layout]
+interval=2
+separator=false
+
+# Key indicators
+#
+[keyindicator]
+command=/usr/libexec/i3blocks/$BLOCK_NAME
+instance=CAPS
+interval=once
+signal=11
