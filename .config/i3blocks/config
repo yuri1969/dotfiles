@@ -37,7 +37,7 @@ markup=none
 # Date Time
 #
 [time]
-command=echo "<span weight=\"bold\">$(date '+%Y-%m-%d %H:%M')</span>"
+command=echo "<span weight=\"bold\" letter_spacing=\"512\">$(date '+%Y-%m-%d %H:%M')</span>"
 interval=5
 align=center
 separator_block_width=150
