@@ -87,7 +87,7 @@ set $ws1 "1:"
 set $ws2 "2:"
 set $ws3 "3:"
 set $ws4 "4:"
-set $ws5 "5"
+set $ws5 "5:"
 set $ws6 "6"
 set $ws7 "7"
 set $ws8 "8"
@@ -256,7 +256,7 @@ exec_always --no-startup-id xrdb -load ~/.Xresources
 # urxvtd - terminal emulator daemon - provided by x11-terms/rxvt-unicode
 exec --no-startup-id urxvtd --quiet --opendisplay --fork
 
-# Firefox/Nightly via gtk-launch - provided by x11-libs/gtk+ 
+# Firefox/Nightly via gtk-launch - provided by x11-libs/gtk+
 #exec cd ~/.local/share/applications && gtk-launch Nightly.desktop
 
 # Discord - provided by net-im/discord-bin
@@ -284,6 +284,6 @@ exec --no-startup-id redshift-gtk
 # compton - standalone compositor (Conky transparency) - provided by x11-misc/compton
 exec_always --no-startup-id compton --config ~/.config/i3/compton.conf
 
-# conky - desktop status - provided by pp-admin/conky
+# conky - desktop status - provided by app-admin/conky
 exec --no-startup-id conky -c ~/.config/i3/conkyrc.lua
 
