@@ -1,11 +1,12 @@
 #
 # starship
-# 0.19.0
+# 0.36.0
 # https://github.com/starship/starship
 #
 
 # Don't print a new line at the start of the prompt
-add_newline = false
+#add_newline = false
+add_newline = true
 
 [directory]
 truncate_to_repo = true
@@ -14,10 +15,11 @@ truncate_to_repo = true
 symbol = "❯"
 
 [cmd_duration]
-min_time = 3
+prefix = ""
+min_time = 5
 
 [battery]
-#disabled = true
+disabled = true
 
 [golang]
 disabled = true
