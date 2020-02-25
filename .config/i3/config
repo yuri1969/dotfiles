@@ -268,7 +268,7 @@ exec --no-startup-id udiskie -s
 # xautolock - lock the screen after 3min - provided by x11-misc/xautolock
 # -detectsleep
 set $notifier "notify-send -u critical -t 10000 -- 'LOCKING screen in 20 seconds'"
-exec --no-startup-id xautolock -detectsleep -time 4 -locker "i3lock -c 111111" \
+exec_always --no-startup-id killall xautolock ; xautolock -detectsleep -time 4 -locker "i3lock -c 111111" \
     -notify 10 -notifier $notifier
 
 # feh - set wallpaper - provided by media-gfx/feh
