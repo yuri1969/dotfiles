@@ -19,10 +19,12 @@ URxvt.scrollBar_right: false
 URxvt.scrollBar_floating: false
 URxvt.scrollstyle: rxvt
 
+! Double buffer xft
+URxvt.buffered: true
 ! Disable hacky transparency
 URxvt.transparent: false
-! Use 32b color depth
-URxvt.depth: 32
+! Use 24b color depth for compatibility
+URxvt.depth: 24
 
 ! Do not scroll with output
 URxvt.scrollTtyOutput: false
@@ -39,6 +41,8 @@ URxvt.pointerBlank: true
 URxvt.pointerBlankDelay: 4
 ! Set line buffer to max value
 URxvt.saveLines: 65535
+! Prepend '-' to a launched shell
+URxvt.loginShell: true
 ! Set the urgency hint for the WM on receipt of a bell character
 URxvt.urgentOnBell: true
 ! Disable the irritating visual bell

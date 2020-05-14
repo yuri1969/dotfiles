@@ -40,3 +40,7 @@ URxvt.color14:      #2aa198
 ! white
 URxvt.color7:       #93a1a1
 URxvt.color15:      #fdf6e3
+
+! underlines
+URxvt.colorUL:          #b58900
+URxvt.underlineColor:   #b58900
