@@ -281,8 +281,8 @@ exec --no-startup-id redshift-gtk
 # nm-applet - network manager - provided by gnome-extra/nm-applet
 #exec --no-startup-id nm-applet
 
-# compton - standalone compositor (Conky transparency) - provided by x11-misc/compton
-exec_always --no-startup-id compton --config ~/.config/i3/compton.conf
+# picom - standalone compositor (Conky transparency) - provided by x11-misc/picom
+exec_always --no-startup-id picom --config ~/.config/i3/picom.conf --daemon
 
 # conky - desktop status - provided by app-admin/conky
 exec --no-startup-id conky -c ~/.config/i3/conkyrc.lua

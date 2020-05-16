@@ -6,7 +6,7 @@ Config files used on a [Gentoo][gentoo]-based machine.
 
 ## i3wm
 
-    emerge -a x11-wm/i3 x11-misc/i3blocks x11-misc/i3lock x11-misc/xautolock x11-misc/rofi x11-misc/compton media-gfx/feh app-admin/conky =media-fonts/fontawesome-4.7.0
+    emerge -a x11-wm/i3 x11-misc/i3blocks x11-misc/i3lock x11-misc/xautolock x11-misc/rofi x11-misc/picom media-gfx/feh app-admin/conky =media-fonts/fontawesome-4.7.0
 
 ## urxvt
 
