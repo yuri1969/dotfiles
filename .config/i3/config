@@ -242,7 +242,7 @@ exec_always --no-startup-id xrandr --output $ntb-display --primary
 #exec --no-startup-id xset -b
 
 # Cap CD-ROM drive's speed at 4x
-exec --no-startup-id eject -x 4
+exec --no-startup-id eject --cdspeed 4
 
 # Set the default volume to 50%
 exec --no-startup-id pactl set-sink-volume 0 '50%'
@@ -263,11 +263,10 @@ exec --no-startup-id urxvtd --quiet --opendisplay --fork
 exec --no-startup-id discord
 
 # udiskie - removable media auto-mount (tray icon enabled) - provided by sys-fs/udiskie
-exec --no-startup-id udiskie -s
+exec --no-startup-id udiskie --smart-tray
 
 # xautolock - lock the screen after 3min - provided by x11-misc/xautolock
-# -detectsleep
-set $notifier "notify-send -u critical -t 10000 -- 'LOCKING screen in 20 seconds'"
+set $notifier "notify-send --urgency critical --expire-time 10000 -- 'LOCKING screen in 20 seconds'"
 exec_always --no-startup-id killall xautolock ; xautolock -detectsleep -time 4 -locker "i3lock -c 111111" \
     -notify 10 -notifier $notifier
 
@@ -285,5 +284,5 @@ exec --no-startup-id redshift-gtk
 exec_always --no-startup-id picom --config ~/.config/i3/picom.conf --daemon
 
 # conky - desktop status - provided by app-admin/conky
-exec --no-startup-id conky -c ~/.config/i3/conkyrc.lua
+exec --no-startup-id conky --config ~/.config/i3/conkyrc.lua
 
