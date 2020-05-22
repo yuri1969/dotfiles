@@ -80,14 +80,19 @@ interval=120
 #interval=10
 #separator=false
 
+# WiFi signal
+#
 [wifi_pure]
 label=
 instance=wlp3s0
 interval=10
 
-#[bandwidth]
-#instance=eth0
-#interval=5
+# Network bandwidth
+#
+[bandwidth_pure]
+instance=wlp3s0
+interval=2
+min_width=in 99.9M
 
 # CPU usage
 #
