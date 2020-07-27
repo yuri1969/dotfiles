@@ -13,10 +13,7 @@ export MAVEN_OPTS="-Xms1G -Xmx4G"
 export CHROME_BIN="/usr/bin/chromium"
 
 # Setup Ruby
-export GEM_HOME="${HOME}/gems"
-
-# Setup Rust Cargo
-export RUST_HOME="${HOME}/.cargo/bin"
+export GEM_HOME="${HOME}/.gems"
 
 # Use 'urxvtc' as the i3wm terminal
 export TERMINAL="urxvtc"
