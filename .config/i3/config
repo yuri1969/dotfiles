@@ -250,6 +250,9 @@ exec --no-startup-id pactl set-sink-volume 0 '50%'
 # dunst - notification daemon - provided by x11-misc/dunst
 exec --no-startup-id dunst -config ~/.config/i3/dunstrc.ini
 
+# GLava - spectrum visualizer - provided by x11-apps/glava from 'sk-overlay'
+exec --no-startup-id glava --desktop
+
 # Load X resources configuration
 exec_always --no-startup-id xrdb -load ~/.Xresources
 

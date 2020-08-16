@@ -6,7 +6,9 @@ Config files used on a [Gentoo][gentoo]-based machine.
 
 ## i3wm
 
-    emerge -a x11-wm/i3 x11-misc/i3blocks x11-misc/i3lock x11-misc/xautolock x11-misc/rofi x11-misc/picom media-gfx/feh app-admin/conky =media-fonts/fontawesome-4.7.0
+Enable Layman's `sk-overlay` Overlay.
+
+    emerge -a x11-wm/i3 x11-misc/i3blocks x11-misc/i3lock x11-misc/xautolock x11-misc/rofi x11-misc/picom media-gfx/feh app-admin/conky =media-fonts/fontawesome-4.7.0 x11-apps/glava
 
 ## urxvt
 
@@ -26,6 +28,6 @@ Enable Layman's `jorgicio` Overlay.
 
     emerge -a x11-misc/redshift x11-apps/xrandr sys-power/acpilight x11-misc/xkblayout-state x11-misc/dunst media-gfx/maim x11-libs/gtk+ sys-fs/udiskie gnome-extra/nm-applet app-misc/mc
 
-[gentoo]:https://gentoo.org
-[urxvt]:https://github.com/kajzersoze/rxvt-unicode
-[powerline]:https://github.com/powerline/fonts
+[gentoo]: https://gentoo.org
+[urxvt]: https://github.com/kajzersoze/rxvt-unicode
+[powerline]: https://github.com/powerline/fonts
