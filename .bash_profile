@@ -15,6 +15,10 @@ export CHROME_BIN="/usr/bin/chromium"
 # Setup Ruby
 export GEM_HOME="${HOME}/.gems"
 
+# Setup NPM globally installed packages
+# Requires: npm config set prefix "${HOME}/.npm-packages"
+export NPM_PACKAGES="${HOME}/.npm-packages"
+
 # Use 'urxvtc' as the i3wm terminal
 export TERMINAL="urxvtc"
 
@@ -27,7 +31,7 @@ export SDKMAN_DIR="${HOME}/.sdkman"
 [[ -s "${HOME}/.sdkman/bin/sdkman-init.sh" ]] && source "${HOME}/.sdkman/bin/sdkman-init.sh"
 
 # Fix the PATH
-export PATH="${MAVEN_HOME}/bin:${GEM_HOME}/bin:${PATH}"
+export PATH="${HOME}/.local/bin:${MAVEN_HOME}/bin:${GEM_HOME}/bin:${NPM_PACKAGES}/bin:${PATH}"
 
 # Start Xorg
 [[ -z "$DISPLAY" && $XDG_VTNR -eq 1 ]] && exec startx
