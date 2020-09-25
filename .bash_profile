@@ -22,6 +22,9 @@ export NPM_PACKAGES="${HOME}/.npm-packages"
 # Use 'urxvtc' as the i3wm terminal
 export TERMINAL="urxvtc"
 
+# Make GTK+ use the dark theme
+export GTK_THEME="Adwaita:dark"
+
 # Style Midnight
 [[ -s /usr/libexec/mc/mc.sh ]] && source /usr/libexec/mc/mc.sh
 export MC_SKIN="${HOME}/.mc/solarized.ini"
