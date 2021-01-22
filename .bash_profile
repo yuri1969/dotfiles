@@ -36,6 +36,9 @@ export SDKMAN_DIR="${HOME}/.sdkman"
 # Fix the PATH
 export PATH="${HOME}/.local/bin:${MAVEN_HOME}/bin:${GEM_HOME}/bin:${NPM_PACKAGES}/bin:${PATH}"
 
+# Start Keychain - don't load anything
+eval "$(keychain --eval --quick --quiet)"
+
 # Start Xorg
 [[ -z "$DISPLAY" && $XDG_VTNR -eq 1 ]] && exec startx
 

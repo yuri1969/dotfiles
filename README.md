@@ -26,7 +26,7 @@ Enable Layman's `jorgicio` Overlay.
 
 ## misc
 
-    emerge -a x11-misc/redshift x11-apps/xrandr sys-power/acpilight x11-misc/xkblayout-state x11-misc/dunst media-gfx/maim x11-misc/xclip x11-libs/gtk+ sys-fs/udiskie gnome-extra/nm-applet app-misc/mc
+    emerge -a x11-misc/redshift x11-apps/xrandr sys-power/acpilight x11-misc/xkblayout-state x11-misc/dunst media-gfx/maim x11-misc/xclip x11-libs/gtk+ net-misc/keychain sys-fs/udiskie gnome-extra/nm-applet app-misc/mc
 
 [gentoo]: https://gentoo.org
 [urxvt]: https://github.com/kajzersoze/rxvt-unicode
