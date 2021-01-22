@@ -193,8 +193,8 @@ bar {
 
 ########################### System bindings ############################
 
-# Set locking mechanism
-bindsym $mod+l exec --no-startup-id xautolock -locknow
+# Set manual locking mechanism
+bindsym $mod+l exec --no-startup-id xscreensaver-command -lock
 
 # Signal '11' to i3blocks
 bindsym --release Caps_Lock exec --no-startup-id pkill -SIGRTMIN+11 i3blocks
@@ -268,10 +268,8 @@ exec --no-startup-id discord
 # udiskie - removable media auto-mount (tray icon enabled) - provided by sys-fs/udiskie
 exec --no-startup-id udiskie --smart-tray
 
-# xautolock - lock the screen after 3min - provided by x11-misc/xautolock
-set $notifier "notify-send --urgency critical --expire-time 10000 -- 'LOCKING screen in 20 seconds'"
-exec_always --no-startup-id killall xautolock ; xautolock -detectsleep -time 4 -locker "i3lock -c 111111" \
-    -notify 10 -notifier $notifier
+# xscreensaver - lock the screen after 4min - provided by x11-misc/xscreensaver
+exec --no-startup-id xscreensaver -no-capture -no-splash
 
 # feh - set wallpaper - provided by media-gfx/feh
 set $wallpaper ~/.config/i3/feh/wallpaper.jpg
