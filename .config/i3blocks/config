@@ -27,7 +27,6 @@
 
 # Global properties
 #
-#command=/usr/libexec/i3blocks/$BLOCK_NAME
 command=~/.config/i3blocks/blocklets/$BLOCK_NAME
 separator_block_width=25
 markup=none
@@ -47,17 +46,16 @@ markup=pango
 # Volume indicator
 #
 [volume_pactl]
-label=
+label= 
 interval=once
-min_width=100%
+min_width= 100%
 signal=10
 
 # Memory usage
 #
 # The type defaults to "mem" if the instance is not specified.
-[memory]
-command=/usr/libexec/i3blocks/$BLOCK_NAME
-label=
+[memory_int]
+label= 
 interval=20
 
 #[memory]
@@ -69,7 +67,7 @@ interval=20
 # Disk usage
 #
 [disk]
-label=
+label= 
 interval=120
 
 # Network interface monitoring
@@ -83,21 +81,21 @@ interval=120
 # WiFi signal
 #
 [wifi_pure]
-label=
-instance=wlp3s0
+label= 
+instance=wlan0
 interval=10
 
 # Network bandwidth
 #
 [bandwidth_pure]
-instance=wlp3s0
+instance=wlan0
 interval=2
 min_width=in 99.9M
 
 # CPU usage
 #
 [cpu_usage_int]
-label=
+label= 
 interval=1
 min_width= 100%
 
@@ -107,8 +105,9 @@ min_width= 100%
 # Temperature
 #
 [temperature_int]
-label=
+label= 
 interval=30
+chip=coretemp-isa-*
 
 # Battery indicator
 #
@@ -150,3 +149,4 @@ command=/usr/libexec/i3blocks/$BLOCK_NAME
 instance=CAPS
 interval=once
 signal=11
+markup=pango

@@ -85,14 +85,23 @@ function print_text() {
   fi
 }
 
-# incoming
-echo -n "in "
-print_text rx_rate
-
+# incoming only
 if [[ "$DISPLAY_IN" = 0 ]]; then
+    echo -n "in "
+    print_text rx_rate
+    echo
+    echo -n "in "
+    print_text rx_rate
     exit
 fi
 
-# outcoming
+# both incoming and outcoming
+echo -n "in "
+print_text rx_rate
+echo -n " out "
+print_text tx_rate
+echo
+echo -n "in "
+print_text rx_rate
 echo -n " out "
 print_text tx_rate
