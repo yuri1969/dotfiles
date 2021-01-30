@@ -10,6 +10,10 @@ Enable Layman's `sk-overlay` Overlay.
 
     emerge -a x11-wm/i3 x11-misc/i3blocks x11-misc/xscreensaver x11-misc/rofi x11-misc/picom media-gfx/feh app-admin/conky =media-fonts/fontawesome-4.7.0 x11-apps/glava
 
+### i3blocks
+
+    emerge -a app-admin/sysstat sys-apps/lm-sensors sys-power/acpi
+
 ## urxvt
 
 Setup a custom Portage Overlay from [github.com/kajzersoze/rxvt-unicode][urxvt].
