@@ -1,5 +1,5 @@
 # XScreenSaver Preferences File
-# Written by xscreensaver-demo 5.44 for lxuser on Mon Feb 15 20:04:11 2021.
+# Written by xscreensaver-demo 5.44 for lxuser on Wed Feb 17 19:50:18 2021.
 # https://www.jwz.org/xscreensaver/
 
 timeout:	0:04:00
@@ -24,7 +24,7 @@ fadeTicks:	24
 captureStderr:	True
 ignoreUninstalledPrograms:False
 font:		*-medium-r-*-140-*-m-*
-dpmsEnabled:	False
+dpmsEnabled:	True
 dpmsQuickOff:	True
 dpmsStandby:	2:00:00
 dpmsSuspend:	2:00:00
