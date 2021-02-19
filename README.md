@@ -28,9 +28,13 @@ Enable Layman's `jorgicio` Overlay.
 
     emerge -a app-editors/vim app-vim/pathogen app-vim/airline app-vim/airline-themes
 
+## display
+
+    emerge -a x11-misc/redshift x11-apps/xrandr sys-power/acpilight x11-misc/colord x11-misc/xiccd
+
 ## misc
 
-    emerge -a x11-misc/redshift x11-apps/xrandr sys-power/acpilight x11-misc/xkblayout-state x11-misc/dunst media-gfx/maim x11-misc/xclip x11-libs/gtk+ net-misc/keychain sys-fs/udiskie gnome-extra/nm-applet app-misc/mc
+    emerge -a x11-misc/xkblayout-state x11-misc/dunst media-gfx/maim x11-misc/xclip x11-libs/gtk+ net-misc/keychain sys-fs/udiskie gnome-extra/nm-applet app-misc/mc
 
 [gentoo]: https://gentoo.org
 [urxvt]: https://github.com/kajzersoze/rxvt-unicode

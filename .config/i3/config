@@ -278,6 +278,9 @@ exec --no-startup-id feh --bg-scale $wallpaper
 # redshit - eye saver - provided by x11-misc/redshift
 exec --no-startup-id redshift-gtk
 
+# xiccd - X to colord bridge - provided by x11-misc/colord and x11-misc/xiccd
+exec --no-startup-id xiccd
+
 # nm-applet - network manager - provided by gnome-extra/nm-applet
 #exec --no-startup-id nm-applet
 
