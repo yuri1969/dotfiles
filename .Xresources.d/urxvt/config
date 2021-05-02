@@ -47,8 +47,8 @@ URxvt.loginShell: true
 URxvt.urgentOnBell: true
 ! Disable the irritating visual bell
 URxvt.visualBell: false
-! Fix weird too big letter spacing. No needed for x11-terms/rxvt-unicode-9.22-r6
-!URxvt.letterSpace: -1
+! Fix weird too big letter spacing
+URxvt.letterSpace: -1
 ! i3wm hack - dont request a borderless window from the WM
 URxvt.borderLess: false
 ! Speed up loading
