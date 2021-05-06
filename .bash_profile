@@ -10,10 +10,13 @@ fi
 export MAVEN_HOME="${HOME}/dev/apache-maven"
 export MAVEN_OPTS="-Xms1G -Xmx4G"
 
+# Setup local Cargo
+export CARGO_HOME="${HOME}/.cargo"
+
 export CHROME_BIN="/usr/bin/chromium"
 
 # Setup Ruby
-export GEM_HOME="${HOME}/.gems"
+export GEM_HOME="${HOME}/.gem"
 
 # Setup NPM globally installed packages
 # Requires: npm config set prefix "${HOME}/.npm-packages"
@@ -25,6 +28,9 @@ export TERMINAL="urxvtc"
 # Make GTK+ use the dark theme
 export GTK_THEME="Adwaita:dark"
 
+# Force Java apps to the GTK+ L&F
+#export _JAVA_OPTIONS="-Dawt.useSystemAAFontSettings=on -Dswing.defaultlaf=com.sun.java.swing.plaf.gtk.GTKLookAndFeel"
+
 # Style Midnight
 [[ -s /usr/libexec/mc/mc.sh ]] && source /usr/libexec/mc/mc.sh
 export MC_SKIN="${HOME}/.mc/solarized.ini"
@@ -34,7 +40,7 @@ export SDKMAN_DIR="${HOME}/.sdkman"
 [[ -s "${HOME}/.sdkman/bin/sdkman-init.sh" ]] && source "${HOME}/.sdkman/bin/sdkman-init.sh"
 
 # Fix the PATH
-export PATH="${HOME}/.local/bin:${MAVEN_HOME}/bin:${GEM_HOME}/bin:${NPM_PACKAGES}/bin:${PATH}"
+export PATH="${HOME}/.local/bin:${MAVEN_HOME}/bin:${CARGO_HOME}/bin:${GEM_HOME}/bin:${NPM_PACKAGES}/bin:${PATH}"
 
 # Start Keychain - don't load anything
 eval "$(keychain --eval --quick --quiet)"
