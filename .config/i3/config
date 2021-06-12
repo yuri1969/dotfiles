@@ -254,7 +254,7 @@ exec --no-startup-id pactl set-sink-volume 0 '50%'
 exec --no-startup-id dunst -config ~/.config/i3/dunstrc.ini
 
 # GLava - spectrum visualizer - provided by x11-apps/glava from 'sk-overlay'
-exec --no-startup-id glava --desktop
+#exec --no-startup-id glava --desktop
 
 # Clipmenu daemon - provided by x11-misc/clipmenu
 exec --no-startup-id clipmenud
