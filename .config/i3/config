@@ -31,6 +31,9 @@ bindsym $mod+Shift+q kill
 # Use rofi as dmenu replacement - provided by x11-misc/rofi
 bindsym $mod+d exec --no-startup-id "rofi -show drun -config ~/.config/i3/rofi.conf"
 
+# Use clipmenu as a clipboard manager - provided by x11-misc/clipmenu
+bindsym $mod+m exec --no-startup-id "CM_LAUNCHER=rofi clipmenu"
+
 # Change window focus
 bindsym $mod+Left focus left
 bindsym $mod+Down focus down
@@ -252,6 +255,9 @@ exec --no-startup-id dunst -config ~/.config/i3/dunstrc.ini
 
 # GLava - spectrum visualizer - provided by x11-apps/glava from 'sk-overlay'
 exec --no-startup-id glava --desktop
+
+# Clipmenu daemon - provided by x11-misc/clipmenu
+exec --no-startup-id clipmenud
 
 # Load X resources configuration
 exec_always --no-startup-id xrdb -load ~/.Xresources
