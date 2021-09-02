@@ -275,7 +275,7 @@ exec --no-startup-id discord
 exec --no-startup-id udiskie --smart-tray
 
 # xscreensaver - lock the screen after 4min - provided by x11-misc/xscreensaver
-exec --no-startup-id xscreensaver -no-capture -no-splash
+exec --no-startup-id xscreensaver --no-splash
 
 # feh - set wallpaper - provided by media-gfx/feh
 set $wallpaper ~/.config/i3/feh/wallpaper.jpg
