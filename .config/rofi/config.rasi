@@ -1,0 +1,18 @@
+configuration {
+    modi: "drun,ssh,run";
+    width: 20;
+    lines: 5;
+    font: ""DejaVu Sans Mono" 10";
+    location: 1;
+    yoffset: 20;
+    terminal: "i3-sensible-terminal";
+    ssh-client: "ssh";
+    ssh-command: "{terminal} -e {ssh-client} {host}";
+    run-command: "{cmd}";
+    run-shell-command: "{terminal} -e {cmd}";
+    threads: 0;
+    color-normal: "#000000, #EEEEEE, #000000, #C0C0C0, #222222";
+    color-urgent: "#900000, #EEEEEE, #000000, #900000, #b1b4b3";
+    color-active: "#333333, #EEEEEE, #000000, #C0C0C0, #b1b4b3";
+    color-window: "#000000, #000000, #222222";
+}

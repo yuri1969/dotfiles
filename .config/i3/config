@@ -29,7 +29,7 @@ bindsym $mod+Return exec i3-sensible-terminal
 bindsym $mod+Shift+q kill
 
 # Use rofi as dmenu replacement - provided by x11-misc/rofi
-bindsym $mod+d exec --no-startup-id "rofi -show drun -config ~/.config/i3/rofi.conf"
+bindsym $mod+d exec --no-startup-id "rofi -show drun"
 
 # Use clipmenu as a clipboard manager - provided by x11-misc/clipmenu
 bindsym $mod+m exec --no-startup-id "CM_LAUNCHER=rofi clipmenu"
