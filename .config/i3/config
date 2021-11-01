@@ -5,8 +5,8 @@
 # Set the main control key. Mod1 = <alt>; Mod4 = <super> (WinKey)
 set $mod Mod4
 
-# Set font for window titles and the bar {} block. DejaVu Sans comes with glyphs and fun
-font pango:DejaVu Sans Mono 10
+# Set font for window titles and the bar {} block. Use Nerd Font with glyphs and fun
+font pango:DejaVuSansMono Nerd Font 9
 
 # Disable disturbing window borders
 hide_edge_borders smart
@@ -86,16 +86,16 @@ set $vga-output VGA-1
 set $hdmi-output HDMI-1
 
 # Name the workspaces
-set $ws1 "1:"
-set $ws2 "2:"
-set $ws3 "3:"
+set $ws1 "1: "
+set $ws2 "2: "
+set $ws3 "3: "
 set $ws4 "4:"
-set $ws5 "5:"
+set $ws5 "5: "
 set $ws6 "6"
 set $ws7 "7"
 set $ws8 "8"
 set $ws9 "9"
-set $ws10 "10:"
+set $ws10 "10: "
 
 # Switch to workspace #
 bindsym $mod+1 workspace $ws1
@@ -170,8 +170,6 @@ bar {
     position top
     # Tray icons only on the primary display
     tray_output primary
-    # Use FontAwesome for bar icons - provided by media-fonts/fontawesome
-    font pango:FontAwesome 10
     separator_symbol "〉"
 
     # Use i3blocks - provided by x11-misc/i3blocks

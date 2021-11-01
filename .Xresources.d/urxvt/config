@@ -7,11 +7,11 @@
 ! Set color theme
 #include "theme"
 
-! Set possible font styles. Use Powerline fonts from https://github.com/powerline/fonts
-URxvt.font: xft:DejaVu Sans Mono for Powerline:size=11
-URxvt.boldFont: xft:DejaVu Sans Mono for Powerline:size=11:style=Bold
-URxvt.italicFont: xft:DejaVu Sans Mono for Powerline:size=11:style=Italic
-URxvt.boldItalicFont: xft:DejaVu Sans Mono for Powerline:size=11:style=Bold Italic
+! Set possible font styles.
+URxvt.font: xft:DejaVuSansMono NF:size=11
+URxvt.boldFont: xft:DejaVuSansMono NF:size=11:style=Bold
+URxvt.italicFont: xft:DejaVuSansMono NF:size=11:style=Italic
+URxvt.boldItalicFont: xft:DejaVuSansMono NF:size=11:style=Bold Italic
 
 ! Disable scrollbars
 URxvt.scrollBar: false

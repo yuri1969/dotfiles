@@ -1,3 +1,5 @@
+! Reload by: xrdb ~/.Xresources
+
 Xcursor.theme: whiteglass
 
 ! Import urxvt config

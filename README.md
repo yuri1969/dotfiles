@@ -8,7 +8,7 @@ Config files used on a [Gentoo][gentoo]-based machine.
 
 Enable Layman's `sk-overlay` Overlay.
 
-    emerge -a x11-wm/i3 x11-misc/i3blocks x11-misc/xscreensaver x11-misc/rofi x11-misc/picom media-gfx/feh app-admin/conky =media-fonts/fontawesome-4.7.0 x11-apps/glava
+    emerge -a x11-wm/i3 x11-misc/i3blocks x11-misc/xscreensaver x11-misc/rofi x11-misc/picom media-gfx/feh app-admin/conky x11-apps/glava
 
 ### i3blocks
 
@@ -18,7 +18,7 @@ Enable Layman's `sk-overlay` Overlay.
 
 Setup a custom Portage Overlay from [github.com/kajzersoze/rxvt-unicode][urxvt].
 
-Download modified Powerline fonts from [github.com/powerline/fonts][powerline].
+Download Nerd Fonts-modified *DejaVu Sans Mono* font from [github.com/ryanoasis/nerd-fonts][nerdfonts] to `~/.local/share/fonts`. Refresh the font cache by `fc-cache --force --verbose`.
 
 Enable Layman's `jorgicio` Overlay.
 
@@ -38,4 +38,4 @@ Enable Layman's `jorgicio` Overlay.
 
 [gentoo]: https://gentoo.org
 [urxvt]: https://github.com/kajzersoze/rxvt-unicode
-[powerline]: https://github.com/powerline/fonts
+[nerdfonts]: https://github.com/ryanoasis/nerd-fonts/releases

@@ -81,7 +81,7 @@ interval=120
 # WiFi signal
 #
 [wifi_pure]
-label= 
+label=  
 instance=wlan0
 interval=10
 min_width= 100% 
