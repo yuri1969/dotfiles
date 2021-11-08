@@ -1,22 +1,23 @@
 #
 # starship
-# 0.36.0
+# 0.58.0
 # https://github.com/starship/starship
 #
 
-# Don't print a new line at the start of the prompt
+# Do/don't print a new line at the start of the prompt
 #add_newline = false
 add_newline = true
 
 [directory]
+# Truncate to root of the Git repo
 truncate_to_repo = true
 
 [character]
-symbol = "❯"
+#format = "$all"
 
 [cmd_duration]
-prefix = ""
-min_time = 5
+# 2sec
+min_time = 2_000
 
 [battery]
 disabled = true
@@ -42,11 +43,10 @@ symbol = "■ "
 disabled = true
 
 [python]
-disabled = true
+disabled = false
 
 [ruby]
 disabled = true
 
 [rust]
-disabled = true
-
+disabled = false
