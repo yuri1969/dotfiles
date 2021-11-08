@@ -1,8 +1,8 @@
 ! Generic settings for applications ignoring 'fontconfig' (e.g. urxvt)
 Xft.dpi:        96
-Xft.antialias:  true
+Xft.antialias:  1
 Xft.rgba:       rgb
-Xft.hinting:    true
+Xft.hinting:    1
 Xft.hintstyle:  hintslight
-Xft.autohint:   true
+Xft.autohint:   0
 Xft.lcdfilter:  lcddefault
