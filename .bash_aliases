@@ -7,3 +7,6 @@ alias g="git"
 alias path='echo -e ${PATH//:/\\n}'
 # ISO calendar week
 alias cw='date +%V'
+# Stick to ISO-8601 week numbers
+alias cal='cal --monday'
+alias diff='diff --color'
