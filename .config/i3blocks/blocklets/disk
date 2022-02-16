@@ -17,8 +17,9 @@
 
 DIR="${BLOCK_INSTANCE:-$HOME}"
 ALERT_LOW="${1:-10}" # color will turn red under this value (default: 10%)
+ALERT_WARN="${2:-15}" # color will turn yellow under this value (default: 15%)
 
-df -h -P -l "$DIR" | awk -v alert_low=$ALERT_LOW '
+df -h -P -l "$DIR" | awk -v "alert_low=${ALERT_LOW}" -v "alert_warn=${ALERT_WARN}" '
 /\/.*/ {
     # full text
     print $4
@@ -33,10 +34,16 @@ df -h -P -l "$DIR" | awk -v alert_low=$ALERT_LOW '
 }
 
 END {
-    gsub(/%$/,"",use)
+    gsub(/%$/, "", use)
+    if (100 - use >= alert_warn) {
+        exit 0
+    }
     if (100 - use < alert_low) {
         # red
         print "#ED322F"
+    } else {
+        # yellow
+        print "#C69A00"
     }
 }
 '
