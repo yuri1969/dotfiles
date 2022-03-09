@@ -31,6 +31,9 @@ bindsym $mod+Shift+q kill
 # Use rofi as dmenu replacement - provided by x11-misc/rofi
 bindsym $mod+d exec --no-startup-id "rofi -show drun"
 
+# Clear all dunst notifications
+bindsym $mod+n exec --no-startup-id "dunstctl close-all"
+
 # Use clipmenu as a clipboard manager - provided by x11-misc/clipmenu
 bindsym $mod+m exec --no-startup-id "CM_LAUNCHER=rofi clipmenu"
 
@@ -248,8 +251,8 @@ exec --no-startup-id eject --cdspeed 4
 # Set the default volume to 50%
 exec --no-startup-id pactl set-sink-volume 0 '50%'
 
-# dunst - notification daemon - provided by x11-misc/dunst
-exec --no-startup-id dunst -config ~/.config/i3/dunstrc.ini
+# Make sure dunst runs as the notification daemon - provided by x11-misc/dunst
+exec --no-startup-id dunst
 
 # GLava - spectrum visualizer - provided by x11-apps/glava from 'sk-overlay'
 #exec --no-startup-id glava --desktop
