@@ -55,8 +55,8 @@ URxvt.borderLess: false
 URxvt.skipBuiltinGlyphs: true
 
 ! Perl extensions - URL matcher
-URxvt.perl-ext: matcher
-! Open detected URLs in Firefox
-URxvt.url-launcher: firefox
+URxvt.perl-ext: default,matcher
+! Open detected URLs in the preferred browser
+URxvt.url-launcher: /usr/bin/xdg-open
 ! Use classic LMB to open the URLs
 URxvt.matcher.button: 1
