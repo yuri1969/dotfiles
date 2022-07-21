@@ -1,6 +1,5 @@
 #
 # starship
-# 0.58.0
 # https://github.com/starship/starship
 #
 
@@ -30,7 +29,7 @@ disabled = true
 ssh_only = true
 
 [jobs]
-disabled = true
+disabled = false
 
 [nix_shell]
 disabled = true

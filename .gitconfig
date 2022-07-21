@@ -16,6 +16,8 @@
 [checkout]
     # Use all logical cores for checkout-related operations
     workers = 0
+[init]
+    defaultBranch = master
 [alias]
     # Based on: https://github.com/perlpunk/slides.tpcig2018/blob/dev/git-tips-tricks/git-tips-tricks.md
     ll = log '--pretty=format:%C(yellow)%h %C(cyan)%ad%Cred%d %Creset%s%Cgreen [%an]' --decorate --graph '--date=format:%Y-%m-%d %H:%M'
