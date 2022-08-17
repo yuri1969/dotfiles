@@ -20,5 +20,5 @@
     defaultBranch = master
 [alias]
     # Based on: https://github.com/perlpunk/slides.tpcig2018/blob/dev/git-tips-tricks/git-tips-tricks.md
-    ll = log '--pretty=format:%C(yellow)%h %C(cyan)%ad%Cred%d %Creset%s%Cgreen [%an]' --decorate --graph '--date=format:%Y-%m-%d %H:%M'
+    ll = log '--pretty=format:%C(yellow)%h %C(cyan)%ad%C(auto)%d %C(reset)%s%C(green) [%an]' --graph '--date=format:%Y-%m-%d %H:%M'
     wd = diff --color-words
