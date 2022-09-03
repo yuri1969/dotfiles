@@ -21,6 +21,12 @@ window:
     columns: 80
     lines: 24
 
+  # Background opacity
+  #
+  # Window opacity as a floating point number from `0.0` to `1.0`.
+  # The value `0.0` is completely transparent and `1.0` is opaque.
+  opacity: 1.0
+
   # Window padding (changes require restart)
   #
   # Blank space added around the window in pixels. This padding is scaled
@@ -143,7 +149,7 @@ colors:
   # Default colors
   primary:
     background: '0x002b36'
-    foreground: '0xeeeeee'
+    foreground: '0xeee8d5'
 
     # Bright and dim foreground colors
     #
@@ -151,7 +157,7 @@ colors:
     # If the bright foreground color is not set, or `draw_bold_text_with_bright_colors`
     # is `false`, the normal foreground color will be used.
     dim_foreground: '0x002b36'
-    bright_foreground: '0xeeeeee'
+    bright_foreground: '0xeee8d5'
 
   # Cursor colors
   #
@@ -159,7 +165,7 @@ colors:
   # the cursor color will be the inverse of the cell color.
   cursor:
     text: '0x000000'
-    cursor: '0xeeeeee'
+    cursor: '0xeee8d5'
 
   # Vi mode cursor colors
   #
@@ -203,7 +209,7 @@ colors:
     blue:    '0x268bd2'
     magenta: '0x6c71c4'
     cyan:    '0x2aa198'
-    white:   '0xeeeeee'
+    white:   '0xeee8d5'
 
   # Bright colors
   bright:
@@ -214,7 +220,7 @@ colors:
     blue:    '0x268bd2'
     magenta: '0x6c71c4'
     cyan:    '0x2aa198'
-    white:   '0xeeeeee'
+    white:   '0xeee8d5'
 
   # Dim colors
   #
@@ -263,11 +269,6 @@ bell:
   duration: 0
   color: '#ffffff'
 
-# Background opacity
-#
-# Window opacity as a floating point number from `0.0` to `1.0`.
-# The value `0.0` is completely transparent and `1.0` is opaque.
-background_opacity: 1.0
 
 # Mouse bindings
 #

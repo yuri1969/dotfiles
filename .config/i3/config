@@ -182,14 +182,15 @@ bar {
 
     colors {
         background #000000
-        # be kind to eyes - #FFFFFF is too much
-        statusline #EEEEEE
-        separator  #666666
+        # base2
+        statusline #EEE8D5
+        # base0
+        separator  #839496
 
         # Schema: border background text
-        focused_workspace  #C0C0C0 #C0C0C0 #222222
-        active_workspace   #333333 #C0C0C0 #222222
-        inactive_workspace #000000 #000000 #EEEEEE
+        focused_workspace  #EEE8D5 #EEE8D5 #222222
+        active_workspace   #333333 #EEE8D5 #222222
+        inactive_workspace #000000 #000000 #EEE8D5
         urgent_workspace   #ED322F #ED322F #222222
         binding_mode       #ED322F #ED322F #222222
     }
