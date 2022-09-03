@@ -36,8 +36,9 @@
 }
 window {
     background-color: @background;
-    border:           1;
-    padding:          3;
+    border:           0px dash 1px 1px 0px;
+    border-color:     @separatorcolor;
+    padding:          4;
 }
 mainbox {
     border:  0;
