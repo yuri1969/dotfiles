@@ -1,0 +1,2 @@
+# To make the mounted '/path' read-write:
+mount -o remount,rw '/dev/device' '/path'

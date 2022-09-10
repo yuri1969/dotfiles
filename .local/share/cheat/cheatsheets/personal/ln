@@ -1,0 +1,2 @@
+# To create a symlink 'link-name':
+ln -s '/path/to/source-file' '/path/to/link-name'
