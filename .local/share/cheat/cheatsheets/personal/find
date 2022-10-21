@@ -1,0 +1,14 @@
+# Find files newer modified ('m') than date ('t'):
+find . -type f -newermt '2008-09-29'
+
+# Find files modified in last 'n' * 24h:
+find . -type f -mtime n
+
+# Find files modified in more than 'n' * 24h:
+find . -type f -mtime +n
+
+# Find files modified in more than 'n' minutes ago:
+find . -type f -mmin +n
+
+# Find files modified in less than 'n' minutes ago:
+find . -type f -mmin n

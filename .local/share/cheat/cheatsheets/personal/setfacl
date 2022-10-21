@@ -1,0 +1,2 @@
+# Allow read-write access to for user '<user>':
+setfacl -m u:<user>:rw '/path/to/file'

@@ -1,0 +1,5 @@
+# Copy local file to remote host '<host>' file as user '<user>':
+rsync -e ssh '/path/to/local/file' '<user>@<host>:/path/to/remote/file'
+
+# Copy local file to remote host '<host>' file as user '<user>' using a specific RSA key:
+rsync -e 'ssh -i /home/<user>/.ssh/id_rsa_custom' '/path/to/local/file' '<user>@<host>:/path/to/remote/file'
