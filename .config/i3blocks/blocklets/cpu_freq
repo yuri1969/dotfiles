@@ -1,0 +1,17 @@
+#!/bin/bash
+#
+# Copyright 2022 1969yuri1969 <1969yuri1969@gmail.com>
+#
+# Licensed under the terms of the GNU GPL v3, or any later version.
+
+FREQ_KHZ="$(cat /sys/devices/system/cpu/cpu0/cpufreq/scaling_cur_freq)"
+FREQ_GHZ="$(echo "scale=2; ${FREQ_KHZ} / 1000000" | bc)"
+
+function prettyPrint() {
+    local FREQ="$1"
+
+    printf '%2.2fGHz\n' "$FREQ"
+}
+
+prettyPrint "$FREQ_GHZ"
+prettyPrint "$FREQ_GHZ"

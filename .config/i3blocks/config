@@ -97,8 +97,14 @@ min_width=in 99.9M
 #
 [cpu_usage_int]
 label= 
-interval=1
+interval=2
 min_width= 100%
+
+# CPU freq
+#
+[cpu_freq]
+interval=3
+min_width=9.99GHz
 
 #[load_average]
 #interval=10
