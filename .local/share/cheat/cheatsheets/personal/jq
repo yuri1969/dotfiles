@@ -1,0 +1,2 @@
+# Pick only the value of the field 'baz' from the object having value of the field 'foo' equal to 'bar':
+jq '.[] | select(.foo  == "bar").baz' '/path/to/file.json'

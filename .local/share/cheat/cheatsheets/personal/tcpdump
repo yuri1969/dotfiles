@@ -1,0 +1,2 @@
+# Dump traffic coming from/to IP 127.0.0.1 via interface eth0:
+tcpdump -w '/path/to/file.pcap' -i 'eth0' src '127.0.0.1' or dst '127.0.0.1'

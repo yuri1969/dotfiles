@@ -4,5 +4,8 @@ tar -xvf '/path/to/foo.tar'
 # To extract a .gz archive:
 tar -xzvf '/path/to/foo.tgz'
 
+# To extract a .gz archive to existing dir 'foo':
+tar -xzvf '/path/to/foo.tgz' -C '/path/to/foo/'
+
 # To create a .gz archive from dir 'foo':
 tar -czvf '/path/to/foo.tgz' '/path/to/foo/'
