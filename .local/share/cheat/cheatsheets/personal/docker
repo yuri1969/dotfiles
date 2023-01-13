@@ -1,0 +1,2 @@
+# Enter the running container 'containerIDfoo' using Bash:
+docker exec -it 'containerIDfoo' '/bin/bash'

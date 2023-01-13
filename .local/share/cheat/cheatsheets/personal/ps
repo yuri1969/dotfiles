@@ -1,0 +1,2 @@
+# Show threads as processes using the user-oriented format (htop-like):
+ps auxH
