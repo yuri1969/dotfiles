@@ -20,6 +20,9 @@ if [[ -f ~/.bash_aliases ]]; then
     source ~/.bash_aliases
 fi
 
-# Register Starship if not inside a TTY
-tty | grep -q "tty" || eval "$(starship init bash)"
+GPG_TTY="$(tty)" && export GPG_TTY
 
+tty | grep -q "tty" || {
+    # Register Starship if not inside a TTY
+    eval "$(starship init bash)";
+}

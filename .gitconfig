@@ -1,6 +1,8 @@
 [user]
     name = yuri1969
     email = 1969yuri1969@gmail.com
+    # the 'sec' hash from: gpg --list-secret-keys --keyid-format=long
+    signingkey = F00
 [core]
     editor = vim
     longpaths = true
@@ -21,4 +23,5 @@
 [alias]
     # Based on: https://github.com/perlpunk/slides.tpcig2018/blob/dev/git-tips-tricks/git-tips-tricks.md
     ll = log '--pretty=format:%C(yellow)%h %C(cyan)%ad%C(auto)%d %C(reset)%s%C(green) [%an]' --graph '--date=format:%Y-%m-%d %H:%M'
+    ls = log --show-signature
     wd = diff --color-words
