@@ -1,2 +1,5 @@
 # Pick only the value of the field 'baz' from the object having value of the field 'foo' equal to 'bar':
 jq '.[] | select(.foo  == "bar").baz' '/path/to/file.json'
+
+# Push the content of all the 'new-*.json' files to the 'target' array of the 'original.json' file:
+jq '.target += [inputs]' '/path/to/original.json' /path/to/new-*.json
