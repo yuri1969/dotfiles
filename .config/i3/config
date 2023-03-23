@@ -217,12 +217,14 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute 1 toggle
 bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 10
 bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 10
 
-# Screenshot key bindings - maim is provided by media-gfx/maim
+# Screenshot key bindings - maim is provided by media-gfx/maim - requires x11-misc/xdotool
 set $screenshot ~/Pictures/$(date +%Y%m%d-%H%M%S_snap).png
-bindsym Print exec --no-startup-id maim $screenshot && maim | xclip -selection clipboard -t image/png
+bindsym Print exec --no-startup-id maim $screenshot && maim | xclip -selection clipboard -t image/png \
+    && notify-send --expire-time=2500 "Screenshot saved" $screenshot
 bindsym Mod1+Print exec --no-startup-id maim -i $(xdotool getactivewindow) $screenshot \
     && maim -i $(xdotool getactivewindow) | xclip -selection clipboard -t image/png
-bindsym Shift+Print exec --no-startup-id maim -s | xclip -selection clipboard -t image/png
+bindsym Shift+Print exec --no-startup-id maim -s $screenshot && notify-send --expire-time=2500 \
+    "Selection saved" $screenshot
 
 ##########################  Assign workspace  ##########################
 
