@@ -3,3 +3,9 @@ rsync -e ssh '/path/to/local/file' '<user>@<host>:/path/to/remote/file'
 
 # Copy local file to remote host '<host>' file as user '<user>' using a specific RSA key:
 rsync -e 'ssh -i /home/<user>/.ssh/id_rsa_custom' '/path/to/local/file' '<user>@<host>:/path/to/remote/file'
+
+# Copy the whole local direcotry to remote host '<host>' file as user '<user>' creating the `dir` on the remote host:
+rsync -az -e ssh '/path/to/local/dir' '<user>@<host>:/path/to/remote/basedir'
+
+# Copy the whole local direcotry recursively to remote host '<host>' file as user '<user>' not creating the `dir` on the remote host:
+rsync -az -e ssh '/path/to/local/dir/' '<user>@<host>:/path/to/remote/basedir'
