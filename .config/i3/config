@@ -22,7 +22,7 @@ floating_modifier $mod
 
 ############################### Bindings ###############################
 
-# Start a terminal - set to 'urxvtc' via TERMINAL="urxvtc" in ~/.bashrc
+# Start a terminal - set to 'urxvtc' via TERMINAL="urxvtc" in ~/.bash_profile
 bindsym $mod+Return exec i3-sensible-terminal
 
 # Kill focused window
