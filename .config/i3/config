@@ -300,3 +300,5 @@ exec_always --no-startup-id picom --daemon
 # conky - desktop status - provided by app-admin/conky
 exec --no-startup-id conky --config ~/.config/i3/conkyrc.lua
 
+# hack the Systemd graphical target in
+exec --no-startup-id systemctl --user start i3-session.target
