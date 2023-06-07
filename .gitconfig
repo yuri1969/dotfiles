@@ -25,3 +25,5 @@
     ll = log '--pretty=format:%C(yellow)%h %C(cyan)%ad%C(auto)%d %C(reset)%s%C(green) [%an]' --graph '--date=format:%Y-%m-%d %H:%M'
     ls = log --show-signature
     wd = diff --color-words
+[commit]
+    gpgSign = true
