@@ -1,0 +1,2 @@
+# To work on multiple files at once
+':sp <file>' splits the editor view; 'Ctrl+w' followed with a direction switches to the split in the direction.

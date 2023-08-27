@@ -3,3 +3,6 @@ openssl s_client -prexit -showcerts -host '<hostname>' -port 443
 
 # Display certificate as both text and PEM/DER format:
 openssl x509 -text -in '/path/to/pem/file'
+
+# Display CSR as both text and the original format:
+openssl req -text -in '/path/to/file.csr'
