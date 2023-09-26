@@ -1,0 +1,14 @@
+# To get logs for given unit since given timestamp:
+journalctl -S '2023-09-26 16:30:00' -u 'unit'
+
+# To get last hour's logs for given unit:
+journalctl -S '-1 hours' -u 'unit'
+
+# To get today's logs for given unit:
+journalctl -S 'today' -u 'unit'
+
+# To grep the log output for given unit using a PCRE2 pattern:
+journalctl -u 'unit' -g '<PCRE2_pattern>'
+
+# To get logs for given unit without wrapping lines although keeping the ouput paged:
+SYSTEMD_LESS=FRXMK journalctl -u 'unit'

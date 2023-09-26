@@ -1,0 +1,5 @@
+# To get list of non-internal topic names from broker TLS enpoints:
+kcat -L -X security.protocol=ssl -b 'broker-1:9094,broker-2:9094' | grep 'topic ' | awk '{ print $2; }' | tr -d '"' | grep -vP '^_'
+
+# To print topic, offset, and size of last 4000 messages from given <topic> via borker TLS endpoint:
+kcat -L -X security.protocol=ssl -b 'broker-1:9094,broker-2:9094' -f '%t %o |%S\n' -C -t '<topic>' -o '-4000' -e
