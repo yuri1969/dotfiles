@@ -1,0 +1,2 @@
+# To split sections of file separated by a new line with '-----' to files named 'outfileXYZ'
+csplit --suppress-matched --digits=3 --prefix='outfile' --elide-empty-files '/path/to/file' '/-----/' '{*}'
