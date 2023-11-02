@@ -25,6 +25,9 @@ export NPM_PACKAGES="${HOME}/.npm-packages"
 # Use 'urxvtc' as the i3wm terminal
 export TERMINAL="urxvtc"
 
+# Do not show space-prefixed commands and dups in the Bash history
+export HISTCONTROL="ignoreboth"
+
 # Make GTK+ use the dark theme
 export GTK_THEME="Adwaita:dark"
 
