@@ -4,7 +4,7 @@
 ! Based on 'solarized.dark' - https://terminal.sexy/
 !
 
-! specia
+! special
 URxvt.foreground:   #eee8d5
 URxvt.background:   #002b36
 URxvt.cursorColor:  #eee8d5
@@ -42,5 +42,5 @@ URxvt.color7:       #93a1a1
 URxvt.color15:      #fdf6e3
 
 ! underlines
-URxvt.colorUL:          #b58900
-URxvt.underlineColor:   #b58900
+URxvt.colorUL:          #fdf6e3
+URxvt.underlineColor:   #fdf6e3

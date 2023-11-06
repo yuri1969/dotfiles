@@ -1,12 +1,14 @@
 "
 " .vimrc
 "
-" Tested on: Gentoo-8.1.1486
+" Tested on: Gentoo-9.0.1627
 "
 
 " don't enforce the plain vi compatibility
 set nocompatible
 
+" detect file type
+filetype on
 " load file type related indent files
 filetype indent on
 " indent new line as the previous one
@@ -34,9 +36,10 @@ syntax on
 " display cursor position x,y
 set ruler
 " highlight current row
-"set cursorline
+set cursorline
+" use underline with default color
+hi CursorLine cterm=underline ctermbg=NONE ctermfg=NONE guibg=NONE guifg=NONE
 " use yellow background with black text
-hi CursorLine cterm=NONE ctermbg=yellow ctermfg=black guibg=yellow guifg=black
 hi CursorLineNr cterm=NONE ctermbg=yellow ctermfg=black guibg=yellow guifg=black
 " number lines
 "set number

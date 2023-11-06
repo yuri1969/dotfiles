@@ -1,7 +1,6 @@
 !
 ! urxvt
-! v9.22-r6 - https://github.com/yuri1969/rxvt-unicode/
-! https://github.com/exg/rxvt-unicode
+! v9.31
 !
 
 ! Set color theme
@@ -60,3 +59,5 @@ URxvt.perl-ext: default,matcher
 URxvt.url-launcher: /usr/bin/xdg-open
 ! Use classic LMB to open the URLs
 URxvt.matcher.button: 1
+! Display the matched URLs as yellow bold
+URxvt.matcher.rend.0: Uline Bold fg5
