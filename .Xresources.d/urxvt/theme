@@ -42,5 +42,5 @@ URxvt.color7:       #93a1a1
 URxvt.color15:      #fdf6e3
 
 ! underlines
-URxvt.colorUL:          #fdf6e3
-URxvt.underlineColor:   #fdf6e3
+!URxvt.colorUL:          #fdf6e3
+!URxvt.underlineColor:   #fdf6e3
