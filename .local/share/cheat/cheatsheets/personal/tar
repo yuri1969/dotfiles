@@ -7,5 +7,8 @@ tar -xzvf '/path/to/foo.tgz'
 # To extract a .gz archive to existing dir 'foo':
 tar -xzvf '/path/to/foo.tgz' -C '/path/to/foo/'
 
-# To create a .gz archive from dir 'foo':
+# To create a gzip archive from dir 'foo':
 tar -czvf '/path/to/foo.tgz' '/path/to/foo/'
+
+# To create a gzip archive using parallel gzip implementation:
+tar -I 'pigz --best --recursive' -cvf '/path/to/foo.tgz' '/path/to/foo/'
