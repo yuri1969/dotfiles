@@ -1,0 +1,11 @@
+{
+    "workbench.colorTheme": "Solarized Dark",
+    "workbench.iconTheme": "vs-nomo-dark",
+    "editor.cursorStyle": "block",
+    "editor.formatOnPaste": false,
+    "editor.formatOnSave": false,
+    "editor.formatOnType": false,
+    "editor.fontFamily": "'DejaVuSansMono NF', 'Symbola', 'Droid Sans Mono', 'monospace'",
+    "terminal.external.linuxExec": "i3-sensible-terminal",
+    "redhat.telemetry.enabled": false
+}
