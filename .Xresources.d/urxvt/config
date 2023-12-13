@@ -6,11 +6,15 @@
 ! Set color theme
 #include "theme"
 
+#define fontName1 DejaVuSansMono NF
+#define fontName2 Symbola
+#define fontSize 11
+
 ! Set possible font styles.
-URxvt.font: xft:DejaVuSansMono NF:size=11
-URxvt.boldFont: xft:DejaVuSansMono NF:size=11:style=Bold
-URxvt.italicFont: xft:DejaVuSansMono NF:size=11:style=Italic
-URxvt.boldItalicFont: xft:DejaVuSansMono NF:size=11:style=Bold Italic
+URxvt.font: xft:fontName1:size=fontSize, xft:fontName2
+URxvt.boldFont: xft:fontName1:size=fontSize:style=Bold
+URxvt.italicFont: xft:fontName1:size=fontSize:style=Italic
+URxvt.boldItalicFont: xft:fontName1:size=fontSize:style=Bold Italic
 
 ! Disable scrollbars
 URxvt.scrollBar: false
