@@ -5,7 +5,7 @@
     "editor.formatOnPaste": false,
     "editor.formatOnSave": false,
     "editor.formatOnType": false,
-    "editor.fontFamily": "'DejaVuSansMono NF', 'Symbola', 'Droid Sans Mono', 'monospace'",
+    "editor.fontFamily": "'DejaVuSansM Nerd Font', 'Symbola', 'Droid Sans Mono', 'monospace'",
     "terminal.external.linuxExec": "i3-sensible-terminal",
     "redhat.telemetry.enabled": false
 }
