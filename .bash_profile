@@ -6,9 +6,8 @@ if [[ -f ~/.bashrc ]] ; then
     source ~/.bashrc
 fi
 
-# Setup Apache Maven
-export MAVEN_HOME="${HOME}/dev/apache-maven"
-export MAVEN_OPTS="-Xms1G -Xmx4G"
+# Setup Apache Maven heap
+export MAVEN_OPTS="-Xmx4G"
 
 # Setup local Cargo
 export CARGO_HOME="${HOME}/.cargo"
