@@ -38,7 +38,7 @@ export GTK_THEME="Adwaita:dark"
 
 # Style Midnight
 [[ -s /usr/libexec/mc/mc.sh ]] && source /usr/libexec/mc/mc.sh
-export MC_SKIN="${HOME}/.mc/solarized.ini"
+export MC_SKIN="${HOME}/.config/mc/solarized.ini"
 
 # Register SDKman
 export SDKMAN_DIR="${HOME}/.sdkman"
