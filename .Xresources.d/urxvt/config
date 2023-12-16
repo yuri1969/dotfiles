@@ -6,13 +6,13 @@
 ! Set color theme
 #include "theme"
 
-#define fontName1 DejaVuSansMono NF
+#define fontName1 DejaVuSansM Nerd Font Mono
 #define fontName2 Symbola
-#define fontSize 11
+#define fontSize 12
 
 ! Set possible font styles.
-URxvt.font: xft:fontName1:size=fontSize, xft:fontName2
-URxvt.boldFont: xft:fontName1:size=fontSize:style=Bold
+URxvt.font: xft:fontName1:size=fontSize:style=Regular,xft:fontName2:size=fontSize
+URxvt.boldFont: xft:fontName1:size=fontSize:style=Bold,xft:fontName2:size=fontSize
 URxvt.italicFont: xft:fontName1:size=fontSize:style=Italic
 URxvt.boldItalicFont: xft:fontName1:size=fontSize:style=Bold Italic
 
@@ -64,7 +64,7 @@ URxvt.letterSpace: -1
 ! i3wm hack - dont request a borderless window from the WM
 URxvt.borderLess: false
 ! Speed up loading
-URxvt.skipBuiltinGlyphs: true
+!URxvt.skipBuiltinGlyphs: true
 
 ! Perl extensions - URL matcher
 URxvt.perl-ext: default,matcher
@@ -74,3 +74,7 @@ URxvt.url-launcher: /usr/bin/xdg-open
 URxvt.matcher.button: 1
 ! Display the matched URLs as yellow bold
 URxvt.matcher.rend.0: Uline Bold fg5
+
+! A semi-working workaround for the prompt appering midscreen in 9.31
+URxvt.geometry: 80x-1
+

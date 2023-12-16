@@ -41,8 +41,8 @@ symbol = "■ "
 [package]
 disabled = true
 
-[python]
-disabled = false
+[gradle]
+style = "bright-cyan"
 
 [ruby]
 disabled = true
