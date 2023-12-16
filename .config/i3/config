@@ -84,8 +84,7 @@ bindsym $mod+a focus parent
 ######################## Workspaces & displays #########################
 
 # Displays - name strings by 'xrandr' - provided by x11-apps/xrandr
-set $ntb-display LVDS-1
-set $vga-output VGA-1
+set $ntb-display eDP-1
 set $hdmi-output HDMI-1
 
 # Name the workspaces
@@ -128,9 +127,9 @@ bindsym $mod+Shift+0 move container to workspace $ws10
 bindsym $mod+z move workspace to output left
 bindsym $mod+x move workspace to output right
 
-# Run an initial RandR setup for a new VGA connected display
-bindsym $mod+shift+z exec --no-startup-id "xrandr --output $vga-output --left-of LVDS-1 --auto"
-bindsym $mod+shift+x exec --no-startup-id "xrandr --output $vga-output --left-of LVDS-1 --auto"
+# Run an initial RandR setup for a new HDMI connected display
+bindsym $mod+shift+z exec --no-startup-id "xrandr --output $hdmi-output --left-of $ntb-display --auto"
+bindsym $mod+shift+x exec --no-startup-id "xrandr --output $hdmi-output --left-of $ntb-display --auto"
 
 # Reload the configuration file
 bindsym $mod+Shift+c reload
@@ -249,7 +248,7 @@ exec_always --no-startup-id xrandr --output $ntb-display --primary
 #exec --no-startup-id xset -b
 
 # Cap CD-ROM drive's speed at 4x
-exec --no-startup-id eject --cdspeed 4
+#exec --no-startup-id eject --cdspeed 4
 
 # Set the default volume to 50%
 exec --no-startup-id pactl set-sink-volume 0 '50%'
