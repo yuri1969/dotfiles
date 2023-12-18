@@ -116,10 +116,16 @@ label=
 interval=30
 chip=coretemp-isa-*
 
-# Battery indicator
+# Battery indicator #0
 #
 [battery_icons]
-#instance=1
+instance=0
+interval=30
+
+# Battery indicator #1
+#
+[battery_icons]
+instance=1
 interval=30
 
 # Generic media player support
