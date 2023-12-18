@@ -1,2 +1,8 @@
 # To work on multiple files at once
 ':sp <file>' splits the editor view; 'Ctrl+w' followed with a direction switches to the split in the direction.
+
+# To delete all matching lines
+':g/<regex>/d'
+
+# To delete all not matching lines
+':!g/<regex>/d'
