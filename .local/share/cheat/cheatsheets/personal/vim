@@ -5,4 +5,4 @@
 ':g/<regex>/d'
 
 # To delete all not matching lines
-':!g/<regex>/d'
+':g!/<regex>/d'
