@@ -1,0 +1,2 @@
+# To generate a 1GiB file holding random data
+dd 'if=/dev/urandom' 'of=/path/to/file' 'bs=1M' 'count=1024'
