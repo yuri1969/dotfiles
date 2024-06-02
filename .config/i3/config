@@ -85,7 +85,7 @@ bindsym $mod+a focus parent
 
 # Displays - name strings by 'xrandr' - provided by x11-apps/xrandr
 set $ntb-display eDP-1
-set $hdmi-output HDMI-1
+set $hdmi-output HDMI-2
 
 # Name the workspaces
 set $ws1 "1: "
