@@ -1,0 +1,2 @@
+# Display GPG public key 'key' in the ASCII form:
+gpg --armor --export 'key'
