@@ -9,3 +9,6 @@ rsync -az -e ssh '/path/to/local/dir' '<user>@<host>:/path/to/remote/basedir'
 
 # Copy the whole local direcotry recursively to remote host '<host>' file as user '<user>' not creating the `dir` on the remote host:
 rsync -az -e ssh '/path/to/local/dir/' '<user>@<host>:/path/to/remote/basedir'
+
+# Copy local file to remote host '<host>' file as user '<user>' and show the progress interactively:
+rsync --progress -e ssh '/path/to/local/file' '<user>@<host>:/path/to/remote/file'
