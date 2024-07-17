@@ -26,3 +26,9 @@ tty | grep -q "tty" || {
     # Register Starship if not inside a TTY
     eval "$(starship init bash)";
 }
+
+# Set window title - e.g. after closing a SSH session
+function set_win_title(){
+    echo -ne "\033]0; ${PWD##*/} \007"
+}
+starship_precmd_user_func="set_win_title"
