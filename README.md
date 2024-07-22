@@ -34,7 +34,7 @@ Refresh the font cache by `fc-cache --force --verbose`.
 
 ## misc
 
-    emerge -a x11-misc/xkblayout-state x11-misc/dunst media-gfx/maim x11-misc/xclip x11-misc/clipmenu net-misc/keychain sys-fs/udiskie gnome-extra/nm-applet x11-themes/adwaita-icon-theme x11-misc/xdg-utils app-misc/mc app-text/grip app-shells/bash-completion media-sound/ncmpcpp app-crypt/pinentry gnome-extra/nemo sys-fs/inotify-tools app-containers/docker app-containers/docker-cli
+    emerge -a x11-misc/xkblayout-state x11-misc/dunst media-gfx/maim x11-misc/xclip x11-misc/clipmenu net-misc/keychain sys-fs/udiskie gnome-extra/nm-applet x11-themes/adwaita-icon-theme x11-misc/xdg-utils app-misc/mc app-text/grip app-shells/bash-completion media-sound/ncmpcpp app-crypt/pinentry gnome-extra/nemo sys-fs/inotify-tools sys-apps/xdg-desktop-portal-gtk app-containers/docker app-containers/docker-cli
 
 [gentoo]: https://gentoo.org
 [nerdfonts]: https://github.com/ryanoasis/nerd-fonts/releases
