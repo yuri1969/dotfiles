@@ -1,5 +1,5 @@
 # XScreenSaver Preferences File
-# Written by xscreensaver-settings 6.05 for lxuser on Sat Dec 24 23:22:27 2022.
+# Written by xscreensaver-settings 6.08 for lxuser on Wed Aug 28 21:35:55 2024.
 # https://www.jwz.org/xscreensaver/
 
 timeout:	0:08:00
@@ -10,8 +10,8 @@ passwdTimeout:	0:00:10
 visualID:	default
 installColormap:    True
 verbose:	False
-splash:		True
-splashDuration:	0:00:03
+splash:		False
+splashDuration:	0:00:00
 demoCommand:	xscreensaver-demo
 nice:		10
 fade:		False
@@ -37,7 +37,7 @@ textFile:	/etc/gentoo-release
 textProgram:	fortune
 textURL:	https://planet.gentoo.org/rss20.xml
 dialogTheme:	default
-settingsGeom:	0,21 -1,-1
+settingsGeom:	0,0 -1,-1
 
 programs:								      \
 				maze --root				    \n\
@@ -288,6 +288,11 @@ programs:								      \
   GL: 				mapscroller --root			    \n\
   GL: 				nakagin --root				    \n\
   GL: 				squirtorus --root			    \n\
+  GL: 				hextrail --root				    \n\
+  GL: 				cubocteversion --root			    \n\
+				droste --root				    \n\
+  GL: 				papercube --root			    \n\
+  GL: 				skulloop --root				    \n\
 
 
 pointerHysteresis:  10
