@@ -1,0 +1,2 @@
+# To generate a new Ed25519 SSH key:
+ssh-keygen -t 'ed25519' -a 100 -C 'foo@bar.eu'
