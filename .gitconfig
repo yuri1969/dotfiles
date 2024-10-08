@@ -24,6 +24,8 @@
     # Based on: https://github.com/perlpunk/slides.tpcig2018/blob/dev/git-tips-tricks/git-tips-tricks.md
     ll = log '--pretty=format:%C(yellow)%h %C(cyan)%ad%C(auto)%d %C(reset)%s%C(green) [%an]' --graph '--date=format:%Y-%m-%d %H:%M'
     ls = log --show-signature
+    sf = show --pretty="" --name-only
     wd = diff --color-words
 [commit]
     gpgSign = true
+    verbose = true
