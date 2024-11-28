@@ -1,0 +1,11 @@
+# Print value of variable X in lower case:
+echo "${X,,}"
+
+# Print value of variable X in upper case:
+echo "${X^^}"
+
+# Print file name of path stored in variable P:
+echo "${P##*/}"
+
+# Print dir name of path stored in variable P:
+echo "${P%/*}"
