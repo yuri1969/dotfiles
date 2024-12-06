@@ -1,5 +1,5 @@
 # XScreenSaver Preferences File
-# Written by xscreensaver-settings 6.08 for lxuser on Wed Aug 28 21:35:55 2024.
+# Written by xscreensaver-settings 6.09 for lxuser on Fri Dec  6 19:46:22 2024.
 # https://www.jwz.org/xscreensaver/
 
 timeout:	0:08:00
@@ -14,9 +14,9 @@ splash:		False
 splashDuration:	0:00:00
 demoCommand:	xscreensaver-demo
 nice:		10
-fade:		False
+fade:		True
 unfade:		False
-fadeSeconds:	0:00:00
+fadeSeconds:	0:00:01
 ignoreUninstalledPrograms:False
 dpmsEnabled:	True
 dpmsQuickOff:	True
@@ -293,6 +293,8 @@ programs:								      \
 				droste --root				    \n\
   GL: 				papercube --root			    \n\
   GL: 				skulloop --root				    \n\
+  GL: 				highvoltage --root			    \n\
+  GL: 				kallisti --root				    \n\
 
 
 pointerHysteresis:  10
