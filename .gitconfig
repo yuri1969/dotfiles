@@ -29,3 +29,5 @@
 [commit]
     gpgSign = true
     verbose = true
+[branch]
+    autosetuprebase = always
