@@ -12,3 +12,9 @@ find . -type f -mmin +n
 
 # Find files modified in less than 'n' minutes ago:
 find . -type f -mmin n
+
+# Find all files and print just their basename:
+find . -type f -printf '%f\n'
+
+# Find all subdirectories of the current directory:
+find . -mindepth 1 -maxdepth 1 -type d
