@@ -6,3 +6,6 @@ openssl x509 -text -in '/path/to/pem/file'
 
 # Display CSR as both text and the original format:
 openssl req -text -in '/path/to/file.csr'
+
+# Confirm the CER file matches the key:
+openssl x509 -noout -modulus -in 'MY000001.cer'; openssl rsa -noout -modulus -in 'MY000001.key'

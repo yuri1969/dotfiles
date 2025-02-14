@@ -1,0 +1,2 @@
+# To convert hex number 'D44F6BAB' to decimal:
+echo 'ibase=16;D44F6BAB' | bc
