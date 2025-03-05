@@ -1,5 +1,8 @@
 # Enter the running container 'containerIDfoo' using Bash:
 docker exec -it 'containerIDfoo' '/bin/bash'
 
+# Print environment of the running container 'containerIDfoo':
+docker exec 'containerIDfoo' bash -c 'printenv'
+
 # Remove any stopped containers and all unused images:
 docker system prune -a
