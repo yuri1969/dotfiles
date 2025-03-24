@@ -9,3 +9,6 @@ openssl req -text -in '/path/to/file.csr'
 
 # Confirm the CER file matches the key:
 openssl x509 -noout -modulus -in 'MY000001.cer'; openssl rsa -noout -modulus -in 'MY000001.key'
+
+# Verify the 'leaf.cer' leaf certificate is issued by intermediate/root certificates 'bundled_intermediate_root_ca.cer':
+openssl verify -CAfile 'bundled_intermediate_root_ca.cer' 'leaf.cer'
