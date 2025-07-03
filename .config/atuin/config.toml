@@ -1,0 +1,6 @@
+# Atuin 18.6.1
+enter_accept = true
+keymap_mode = "vim-normal"
+
+[daemon]
+enabled = true

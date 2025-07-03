@@ -22,8 +22,11 @@ fi
 
 GPG_TTY="$(tty)" && export GPG_TTY
 
+# not inside a TTY
 tty | grep -q "tty" || {
-    # Register Starship if not inside a TTY
+    # Register Atuin
+    eval "$(atuin init bash --disable-ctrl-r)";
+    # Register Starship
     eval "$(starship init bash)";
 }
 

@@ -277,6 +277,9 @@ exec --no-startup-id discord
 # udiskie - removable media auto-mount (tray icon enabled) - provided by sys-fs/udiskie
 exec --no-startup-id udiskie --smart-tray
 
+# atuin - shell history manager - provided by app-shells/atuin
+exec --no-startup-id atuin daemon
+
 # xscreensaver - lock the screen after 4min - provided by x11-misc/xscreensaver
 exec --no-startup-id xscreensaver --no-splash
 
