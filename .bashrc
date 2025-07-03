@@ -36,5 +36,8 @@ function set_win_title(){
 }
 starship_precmd_user_func="set_win_title"
 
+export SDKMAN_DIR=~/.sdkman
+[[ -s ~/.sdkman/bin/sdkman-init.sh ]] && source ~/.sdkman/bin/sdkman-init.sh
+
 # Register Bash preexec
 [[ -f ~/.bash-preexec.sh ]] && source ~/.bash-preexec.sh
