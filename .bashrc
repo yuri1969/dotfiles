@@ -32,3 +32,6 @@ function set_win_title(){
     echo -ne "\033]0; ${PWD##*/} \007"
 }
 starship_precmd_user_func="set_win_title"
+
+# Register Bash preexec
+[[ -f ~/.bash-preexec.sh ]] && source ~/.bash-preexec.sh
