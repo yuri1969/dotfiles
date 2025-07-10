@@ -25,7 +25,7 @@ GPG_TTY="$(tty)" && export GPG_TTY
 # not inside a TTY
 tty | grep -q "tty" || {
     # Register Atuin
-    eval "$(atuin init bash --disable-ctrl-r)";
+    eval "$(atuin init bash --disable-up-arrow)";
     # Register Starship
     eval "$(starship init bash)";
 }
