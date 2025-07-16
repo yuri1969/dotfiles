@@ -31,10 +31,21 @@ tty | grep -q "tty" || {
 }
 
 # Set window title - e.g. after closing a SSH session
-function set_win_title(){
+function set_win_title() {
     echo -ne "\033]0; ${PWD##*/} \007"
 }
-starship_precmd_user_func="set_win_title"
+
+# Add horizontal line before prompt
+function hr_precmd() {
+    printf '\033[90;4m%*s\e[0m\n' "$(tput cols)"
+}
+
+function custom_starship_precmd() {
+    set_win_title;
+    hr_precmd;
+}
+
+starship_precmd_user_func='custom_starship_precmd'
 
 export SDKMAN_DIR=~/.sdkman
 [[ -s ~/.sdkman/bin/sdkman-init.sh ]] && source ~/.sdkman/bin/sdkman-init.sh
