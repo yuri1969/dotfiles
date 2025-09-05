@@ -1,0 +1,2 @@
+# To show nameserver details:
+dig +trace 'domain.name.'
