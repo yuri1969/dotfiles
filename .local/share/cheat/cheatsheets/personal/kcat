@@ -6,3 +6,6 @@ kcat -C -X security.protocol=ssl -b 'broker-1:9094,broker-2:9094' -f '%t %o |%S\
 
 # To print message content of each message from given <topic> appending a new line with separator '-----' via borker TLS endpoint:
 kcat -C -X security.protocol=ssl -b 'broker-1:9094,broker-2:9094' -t '<topic>' -D '\n-----\n' -e
+
+# To print message content of each message from given <topic> appending a new line with the ',' separator via broker TLS enpoint in given time interval (in miliseconds):
+kcat -C -X security.protocol=ssl -b 'broker-1:9094,broker-2:9094' -t '<topic>' -o 's@<since_epoch>000' -o 'e@<to_epoch>000' -D ',\n' -e
