@@ -1,0 +1,5 @@
+# Sync all current Git-based projects:
+mani sync --parallel
+
+# Count files in all projects tagged 'foo' while ignoring empty projects:
+mani exec --tags 'foo' --output table --ignore-non-existing --parallel 'find . -type f | wc -l'
