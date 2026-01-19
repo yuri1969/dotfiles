@@ -45,7 +45,7 @@ markup=pango
 
 # Volume indicator
 #
-[volume_pactl]
+[volume_wpctl]
 label= 
 interval=once
 min_width= 100%

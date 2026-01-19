@@ -1,0 +1,6 @@
+#!/bin/bash
+
+VOLUME="$(wpctl get-volume '@DEFAULT_AUDIO_SINK@' | awk '{ printf "%d%%%s%s\n", $2*100, ($3==""?"":" "), $3 }')"
+
+echo "${VOLUME}" # full text
+echo "${VOLUME}" # short text
