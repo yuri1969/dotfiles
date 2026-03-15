@@ -12,3 +12,9 @@ journalctl -u 'unit' -g '<PCRE2_pattern>'
 
 # To get logs for given unit without wrapping lines although keeping the ouput paged:
 SYSTEMD_LESS=FRXMK journalctl -u 'unit'
+
+# To list recorded boots:
+journalctl --list-boots
+
+# To get kernel logs for boot index '-1':
+journalctl -b '-1' -k
