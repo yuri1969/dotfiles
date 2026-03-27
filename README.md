@@ -50,7 +50,7 @@ emerge -a x11-misc/xkblayout-state x11-misc/dunst media-gfx/maim x11-misc/xclip 
 net-misc/keychain sys-fs/udiskie gnome-extra/nm-applet x11-themes/adwaita-icon-theme x11-misc/xdg-utils \
 app-misc/mc app-text/grip app-shells/bash-completion media-sound/ncmpcpp app-crypt/pinentry \
 gnome-extra/nemo sys-fs/inotify-tools sys-apps/xdg-desktop-portal-gtk app-containers/docker \
-app-containers/docker-cli
+app-containers/docker-cli app-admin/keepassxc
 ```
 
 [gentoo]: https://gentoo.org
